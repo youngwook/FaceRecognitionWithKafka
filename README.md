@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # FaceRecognitionWithKafka
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -8,3 +9,6 @@ Real-Time Face Recognition with kafka, OpenCV and Raspberry pi
 =======
 Test Real-Time Face Recognition with Raspberry pi 
 >>>>>>> 71a732db42375d2f323f64a68c7c76c28eae66cc
+=======
+# FaceRecognitionWithKafka
+>>>>>>> 34fdf3bb26517bfb87e67e6c3dfc912c95174af4
