@@ -37,5 +37,60 @@ Raspberry pi 3 model B:
   - python3-dev: python language version 3
   - opencv-contrib-python: opency library to manipulate images [link](https://www.pyimagesearch.com/2017/09/04/raspbian-stretch-install-opencv-3-python-on-your-raspberry-pi/)
 
+## train recognizer
+### for gethering face images
+note: in the python code you have to change the ip address to the machine where the kafka server is runing.
+#### in consumer
 
+1. start kafka server
+change directory to kafka server directory then run it
+'''
+$bin bin/kafka-server-start.sh config/server.properties
+'''
+2. execute save image python code to save image from kafka
+'''
+$python3 FaceGathering.py
+'''
+#### in publisher
+1. change to virtual environment(note: if you did not using virtual environment just ignore)
+in home directory of user
+'''
+$source .profile
+$workon cv
+'''
+2. execute image capture and publisher to publish image get from camera to kafka
+'''
+$ python PublishImageToKafka.py
+'''
 
+### for train model
+#### in consumer
+1. execute model training python code to train model with gathered images
+'''
+$python3 TrainFaceDetector.py
+'''
+
+## test recognizer
+note: in the python code you have to change the ip address to the machine where the kafka server is runing.
+#### in consumer
+
+1. start kafka server
+change directory to kafka server directory then run it
+'''
+$bin bin/kafka-server-start.sh config/server.properties
+'''
+2. execute Face Detector to recognize streaming image from raspberry pi
+'''
+$python3 CaptureTrainImage.py
+'''
+#### in publisher
+1. change to virtual environment(note: if you did not using virtual environment just ignore)
+in home directory of user
+'''
+$source .profile
+$workon cv
+'''
+2. execute image publisher to publish image get from camera to kafka
+'''
+$ python PublishImageToKafka.py
+'''
