@@ -60,7 +60,7 @@ $workon cv
 ```
 2. execute image capture and publisher to publish image get from camera to kafka
 ```
-$ python PublishImageToKafka.py
+$ python CaptureTrainImage.py
 ```
 
 ### for train model
