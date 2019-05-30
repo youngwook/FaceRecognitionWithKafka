@@ -1,10 +1,10 @@
 # Face Recognition With Kafka and Raspberry
 1. environment requirements
-  1. for consumer
-  2. for publisher
+  * for consumer
+  * for producer
 2. train recognizer
-  1. image data preparation
-  2. train model
+  * image data preparation
+  * train model
 3. test recognizer
 
 ## environment requirements
@@ -24,7 +24,7 @@ Develop Environment:
   - opencv-contrib-python: opency library to manipulate images
   - python3-dev: python language version 3
   
-#### for publisher
+#### for producer
 Raspberry pi 3 model B:
 - OS: rasbian stretch
 - CPU: Quad Core 1.2GHz Broadcom BCM2837 64bit CPU
@@ -51,7 +51,7 @@ $bin bin/kafka-server-start.sh config/server.properties
 ```
 $python3 FaceGathering.py
 ```
-#### in publisher
+#### in producer
 1. change to virtual environment(note: if you did not using virtual environment just ignore)
 in home directory of user
 ```
@@ -83,7 +83,7 @@ $bin bin/kafka-server-start.sh config/server.properties
 ```
 $python3 CaptureTrainImage.py
 ```
-#### in publisher
+#### in producer
 1. change to virtual environment(note: if you did not using virtual environment just ignore)
 in home directory of user
 ```
