@@ -81,7 +81,7 @@ $bin bin/kafka-server-start.sh config/server.properties
 ```
 2. execute Face Detector to recognize streaming image from raspberry pi
 ```
-$python3 CaptureTrainImage.py
+$python3 FaceDetector.py
 ```
 #### in producer
 1. change to virtual environment(note: if you did not using virtual environment just ignore)
